@@ -3,5 +3,25 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: center;
+  --img: url('/images/img-1.jpg');
+}
+
+header {
+  background-image: var(--img);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  -webkit-transition: background-image 1.5s ease-in;
+  transition: background-image 1.5s ease-in;
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 100vh;
+    background-size: contain;
+  }
 }
 /*# sourceMappingURL=style.css.map */
