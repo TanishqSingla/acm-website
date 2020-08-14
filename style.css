@@ -4,24 +4,26 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
-  --img: url('/images/img-1.jpg');
+  font-family: sans-serif;
 }
 
 header {
-  background-image: var(--img);
+  position: relative;
+  background-image: url("images/img-2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   height: 650px;
   width: 100%;
   -webkit-transition: 5s;
   transition: 5s;
+  z-index: -1;
   -webkit-animation-name: hero;
           animation-name: hero;
   animation-direction: alternate-reverse;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-iteration-count: infinite;
@@ -30,6 +32,55 @@ header {
           animation-play-state: running;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+}
+
+header nav .logo {
+  margin: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  height: 100%;
+  width: 10rem;
+}
+
+header nav .logo img {
+  height: 100%;
+  width: 100%;
+}
+
+header nav .navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header nav .navbar-nav li {
+  margin: 0 2rem;
+}
+
+header nav .navbar-nav li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 @-webkit-keyframes hero {
