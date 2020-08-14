@@ -12,10 +12,48 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 600px;
+  background-position: center;
+  height: 650px;
   width: 100%;
-  -webkit-transition: background-image 1.5s ease-in;
-  transition: background-image 1.5s ease-in;
+  -webkit-transition: 5s;
+  transition: 5s;
+  -webkit-animation-name: hero;
+          animation-name: hero;
+  animation-direction: alternate-reverse;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes hero {
+  0% {
+    background-image: url("images/img-1.jpg");
+  }
+  50% {
+    background-image: url("images/img-2.jpg");
+  }
+  100% {
+    background-image: url("images/img-3.jpg");
+  }
+}
+
+@keyframes hero {
+  0% {
+    background-image: url("images/img-1.jpg");
+  }
+  50% {
+    background-image: url("images/img-2.jpg");
+  }
+  100% {
+    background-image: url("images/img-3.jpg");
+  }
 }
 
 @media (max-width: 600px) {
