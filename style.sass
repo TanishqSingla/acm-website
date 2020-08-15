@@ -1,0 +1,104 @@
+*
+  margin: 0
+  padding: 0
+body
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  text-align: center
+  font-family: sans-serif
+
+header
+  position: relative
+  background:
+    image: url('images/img-2.jpg')
+    repeat: no-repeat
+    attachment: fixed
+    size: cover
+    position: top center
+  height: 100vh
+  width: 100%
+  transition: 5s
+
+  animation:
+    name: hero
+    direction: alternate-reverse
+    duration: 25s
+    fill-mode: forwards
+    iteration-count: infinite
+    play-state: running
+    timing-function: ease-in-out
+  
+  .hero-overlay
+    height: 100%
+    width: 100%
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0))
+  
+  nav
+    display: flex
+    margin: 0
+    top: 0
+    width: 100%
+    height: 4rem
+    .logo
+      margin: 0
+      height: 100%
+      width: 10rem 
+      img
+        height: 100%
+        width: 100%
+    .navbar-nav
+      list-style-type: none
+      margin: 0
+      width: 100%
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      li
+        margin: 0 2rem
+        a
+          text-decoration: none
+          color: white
+          font-size: 20px
+          letter-spacing: 3px
+          &::after
+            content: ''
+            margin: auto
+            display: block 
+            opacity: 0
+            background: white
+            height: 1px
+          &:hover::after
+            animation:
+              name: underline
+              timing-function: ease-in-out
+              duration: .5s
+              fill-mode: forwards
+
+            
+
+footer
+  background: #1d1d1d
+  padding: 15px 30px
+  color: white
+
+@keyframes underline
+  0%
+    width: 0%
+    opacity: 0
+  100%
+    width: 80%
+    opacity: 1
+
+@keyframes hero 
+  0% 
+    background-image: url('images/img-1.jpg')
+  50% 
+    background-image: url('images/img-2.jpg')
+  100% 
+    background-image: url('images/img-3.jpg')
+
+@media ( max-width: 600px )
+  header
+    height: 300px
+    background-size: contain
